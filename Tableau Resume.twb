@@ -1,0 +1,2062 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='TableauResumev2_17410015248620' path='/workbooks' revision='1.6' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Skills+ (resume_data)' inline='true' name='federated.0sp88ps1k4tc1610ybosj0b9nn53' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='resume_data' name='excel-direct.0hbnf431ian2lu1glg9tg0mqoxyw'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/minia/Documents/Tableau/resume_data.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='Skills+' type='union'>
+          <columns header='yes'>
+            <column datatype='string' name='Skill Name' />
+            <column datatype='real' name='Skill Level' />
+            <column datatype='integer' name='Skill Max' />
+            <column datatype='string' name='Type' />
+            <column datatype='string' name='Tooltip' />
+            <column datatype='integer' name='Order' />
+            <column datatype='date' name='Start Date' />
+            <column datatype='date' name='End Date' />
+            <column datatype='integer' name='Duration' />
+            <column datatype='string' name='Organisation' />
+            <column datatype='string' name='Title' />
+            <column datatype='string' name='Sheet' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='excel-direct.0hbnf431ian2lu1glg9tg0mqoxyw' name='Skills' table='[Skills$]' type='table'>
+            <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='2'>
+              <column datatype='string' name='Skill Name' ordinal='0' />
+              <column datatype='real' name='Skill Level' ordinal='1' />
+              <column datatype='integer' name='Skill Max' ordinal='2' />
+              <column datatype='string' name='Type' ordinal='3' />
+              <column datatype='string' name='Tooltip' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0hbnf431ian2lu1glg9tg0mqoxyw' name='Work Experience' table='[&apos;Work Experience$&apos;]' type='table'>
+            <columns gridOrigin='A1:H11:no:A1:H11:0' header='yes' outcome='2'>
+              <column datatype='integer' name='Order' ordinal='0' />
+              <column datatype='date' name='Start Date' ordinal='1' />
+              <column datatype='date' name='End Date' ordinal='2' />
+              <column datatype='integer' name='Duration' ordinal='3' />
+              <column datatype='string' name='Type' ordinal='4' />
+              <column datatype='string' name='Organisation' ordinal='5' />
+              <column datatype='string' name='Title' ordinal='6' />
+              <column datatype='string' name='Tooltip' ordinal='7' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Skill Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Skill Name]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Skill Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Skill Level</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Skill Level]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Skill Level</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Skill Max</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Skill Max]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Skill Max</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tooltip</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tooltip]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Tooltip</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Order</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Start Date]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Start Date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[End Date]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>End Date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Duration]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Duration</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Organisation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Organisation]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Organisation</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Title]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sheet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sheet]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Sheet</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Skills+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='End Date Calc Field' datatype='datetime' name='[Calculation_765330514643480580]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATEADD(&quot;day&quot;,[Duration],[Start Date])' />
+      </column>
+      <column datatype='real' name='[Skill Level]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Skill Name]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;Commuication&quot;' value='Communication' />
+          <alias key='&quot;Time management&quot;' value='Time Management' />
+        </aliases>
+      </column>
+      <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+      <column caption='Resume Data' datatype='table' name='[__tableau_internal_object_id__].[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]' role='measure' type='quantitative' />
+      <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Skill Level]' derivation='Sum' name='[sum:Skill Level:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='C:/Users/minia/Documents/My Tableau Repository/Data sources/Skills+ (resume_data).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/03/2025 11:29:31 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Skills+ (resume_data)' increment-value='%null%' refresh-type='create' rows-inserted='22' timestamp-start='2025-03-03 11:29:29.305' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Skill Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Skill Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Skill Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Skill Level</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Skill Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Skill Level</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Skills+</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Skill Max</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Skill Max]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Skill Max</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Skills+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tooltip</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tooltip]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tooltip</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Order]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Skills+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Start Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Start Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Start Date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Skills+</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>End Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[End Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>End Date</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Skills+</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Duration</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Duration]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Duration</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Skills+</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Organisation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Organisation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Organisation</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Title</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sheet</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sheet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sheet</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Table Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Table Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Table Name</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Skills+</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <object-id>[Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Education&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Volunteer&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Technical&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Work&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Soft&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514639777793:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514640105475:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Resume Data' id='Skills_05A28A1DE7D3430AB7A8D00A8AD74CF8'>
+            <properties context=''>
+              <relation all='true' name='Skills+' type='union'>
+                <columns header='yes'>
+                  <column datatype='string' name='Skill Name' />
+                  <column datatype='real' name='Skill Level' />
+                  <column datatype='integer' name='Skill Max' />
+                  <column datatype='string' name='Type' />
+                  <column datatype='string' name='Tooltip' />
+                  <column datatype='integer' name='Order' />
+                  <column datatype='date' name='Start Date' />
+                  <column datatype='date' name='End Date' />
+                  <column datatype='integer' name='Duration' />
+                  <column datatype='string' name='Organisation' />
+                  <column datatype='string' name='Title' />
+                  <column datatype='string' name='Sheet' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='excel-direct.0hbnf431ian2lu1glg9tg0mqoxyw' name='Skills' table='[Skills$]' type='table'>
+                  <columns gridOrigin='A1:E13:no:A1:E13:0' header='yes' outcome='2'>
+                    <column datatype='string' name='Skill Name' ordinal='0' />
+                    <column datatype='real' name='Skill Level' ordinal='1' />
+                    <column datatype='integer' name='Skill Max' ordinal='2' />
+                    <column datatype='string' name='Type' ordinal='3' />
+                    <column datatype='string' name='Tooltip' ordinal='4' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.0hbnf431ian2lu1glg9tg0mqoxyw' name='Work Experience' table='[&apos;Work Experience$&apos;]' type='table'>
+                  <columns gridOrigin='A1:H11:no:A1:H11:0' header='yes' outcome='2'>
+                    <column datatype='integer' name='Order' ordinal='0' />
+                    <column datatype='date' name='Start Date' ordinal='1' />
+                    <column datatype='date' name='End Date' ordinal='2' />
+                    <column datatype='integer' name='Duration' ordinal='3' />
+                    <column datatype='string' name='Type' ordinal='4' />
+                    <column datatype='string' name='Organisation' ordinal='5' />
+                    <column datatype='string' name='Title' ordinal='6' />
+                    <column datatype='string' name='Tooltip' ordinal='7' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Professional History'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skills+ (resume_data)' name='federated.0sp88ps1k4tc1610ybosj0b9nn53' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sp88ps1k4tc1610ybosj0b9nn53'>
+            <column datatype='integer' name='[Duration]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Organisation]' role='dimension' type='nominal' />
+            <column datatype='date' name='[Start Date]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Title]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Tooltip]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Type]' role='dimension' type='nominal' />
+            <column-instance column='[Organisation]' derivation='Attribute' name='[attr:Organisation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tooltip]' derivation='Attribute' name='[attr:Tooltip:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Start Date]' derivation='Min' name='[min:Start Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Title]' derivation='None' name='[none:Title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Type]' derivation='None' name='[none:Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Duration]' derivation='Sum' name='[sum:Duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Date]' derivation='Day-Trunc' name='[tdy:Start Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Title:nk]' />
+              <groupfilter function='member' level='[none:Title:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]' direction='ASC' using='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[min:Start Date:qk]' />
+          <slices>
+            <column>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[tdy:Start Date:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Type:nk]' />
+              <size column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Duration:qk]' />
+              <tooltip column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Organisation:nk]' />
+              <tooltip column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Type:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Type:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Title:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Organisation:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Organisation:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]</rows>
+        <cols>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[tdy:Start Date:qk]</cols>
+      </table>
+      <simple-id uuid='{5B2308BE-3E0C-45EC-B841-02D0DF91250D}' />
+    </worksheet>
+    <worksheet name='Soft Skills'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skills+ (resume_data)' name='federated.0sp88ps1k4tc1610ybosj0b9nn53' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sp88ps1k4tc1610ybosj0b9nn53'>
+            <column caption='0.0' datatype='real' name='[Calculation_765330514640105475]' role='measure' type='quantitative' user:unnamed='Soft Skills'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+            <column datatype='real' name='[Skill Level]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Skill Max]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Skill Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Commuication&quot;' value='Communication' />
+                <alias key='&quot;Time management&quot;' value='Time Management' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Tooltip]' role='dimension' type='nominal' />
+            <column-instance column='[Tooltip]' derivation='Attribute' name='[attr:Tooltip:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Skill Name]' derivation='None' name='[none:Skill Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_765330514640105475]' derivation='Sum' name='[sum:Calculation_765330514640105475:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Skill Level]' derivation='Sum' name='[sum:Skill Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Skill Max]' derivation='Sum' name='[sum:Skill Max:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Adaptability&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Commuication&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Leadership&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Problem Solving&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Teamwork&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Time management&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]' direction='DESC' using='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' />
+          <slices>
+            <column>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514640105475:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514640105475:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <size column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Max:qk]' />
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-color' value='#606b76' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+              <tooltip column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Skill Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-color' value='#e15759' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</rows>
+        <cols>([federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514640105475:qk] + [federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk])</cols>
+      </table>
+      <simple-id uuid='{82342F48-09C2-42DA-A817-064BE5201CD8}' />
+    </worksheet>
+    <worksheet name='Technical Skills'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Skills+ (resume_data)' name='federated.0sp88ps1k4tc1610ybosj0b9nn53' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sp88ps1k4tc1610ybosj0b9nn53'>
+            <column caption='0.0' datatype='real' name='[Calculation_765330514639777793]' role='measure' type='quantitative' user:unnamed='Skills'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+            <column datatype='real' name='[Skill Level]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Skill Max]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Skill Name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;Commuication&quot;' value='Communication' />
+                <alias key='&quot;Time management&quot;' value='Time Management' />
+              </aliases>
+            </column>
+            <column datatype='string' name='[Tooltip]' role='dimension' type='nominal' />
+            <column-instance column='[Tooltip]' derivation='Attribute' name='[attr:Tooltip:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Skill Name]' derivation='None' name='[none:Skill Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_765330514639777793]' derivation='Sum' name='[sum:Calculation_765330514639777793:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Skill Level]' derivation='Sum' name='[sum:Skill Level:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Skill Max]' derivation='Sum' name='[sum:Skill Max:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Excel&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;PowerBI&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Python&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;R&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;SQL&quot;' />
+              <groupfilter function='member' level='[none:Skill Name:nk]' member='&quot;Tableau&quot;' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]' direction='DESC' using='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' />
+          <slices>
+            <column>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514639777793:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='cols' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514639777793:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='GanttBar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <size column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Max:qk]' />
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='mark-color' value='#606b76' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' />
+              <tooltip column='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Skill Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<[federated.0sp88ps1k4tc1610ybosj0b9nn53].[attr:Tooltip:nk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-color' value='#b07aa1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</rows>
+        <cols>([federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Calculation_765330514639777793:qk] + [federated.0sp88ps1k4tc1610ybosj0b9nn53].[sum:Skill Level:qk])</cols>
+      </table>
+      <simple-id uuid='{3361CF53-772D-442D-9955-DE8BB7AAB510}' />
+    </worksheet>
+    <worksheet name='bg'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{39AEF676-3B35-4304-897C-5700347A011D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Resume Dashboard'>
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='vertical-align' id='dash-text_56' value='top' />
+        </style-rule>
+      </style>
+      <size maxheight='1200' maxwidth='1600' minheight='1200' minwidth='1600' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='22833' id='5' param='horz' type-v2='layout-flow' w='99000' x='500' y='76500'>
+            <zone fixed-size='567' h='22833' id='6' is-fixed='true' name='Technical Skills' show-title='false' w='35938' x='500' y='76500'>
+              <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='529' h='22833' id='8' is-fixed='true' name='Soft Skills' show-title='false' w='33563' x='36438' y='76500'>
+              <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='43750' id='10' param='horz' type-v2='layout-flow' w='99000' x='500' y='26917'>
+            <zone h='43750' id='17' is-fixed='true' type-v2='layout-basic' w='99000' x='500' y='26917'>
+              <zone h='43750' id='11' param='horz' type-v2='layout-flow' w='78923' x='500' y='26917'>
+                <zone h='43750' id='14' name='Professional History' show-title='false' w='78923' x='500' y='26917'>
+                  <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='43750' id='18' param='horz' type-v2='layout-flow' w='20077' x='79423' y='26917'>
+                <zone h='43750' id='16' param='horz' type-v2='layout-flow' w='20077' x='79423' y='26917' />
+              </zone>
+            </zone>
+          </zone>
+          <zone h='26250' id='13' param='vert' type-v2='layout-flow' w='99000' x='500' y='667'>
+            <zone fixed-size='242' h='20167' id='51' is-fixed='true' name='bg' show-title='false' w='99000' x='500' y='667'>
+              <layout-cache type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='0' />
+                <format attr='background-color' value='#e6e6e6' />
+              </zone-style>
+            </zone>
+            <zone h='6083' id='52' param='horz' type-v2='layout-flow' w='99000' x='500' y='20834' />
+          </zone>
+          <zone h='5833' id='28' param='horz' type-v2='layout-flow' w='99000' x='500' y='70667' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='3417' id='23' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/images.jpg' type-v2='bitmap' w='7500' x='67625' y='47917' />
+        <zone h='6917' id='21' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/OPSM-logo.png' type-v2='bitmap' w='6250' x='53688' y='33917' />
+        <zone h='7667' id='19' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/the-university-of-melbourne-logo-png-transparent.png' type-v2='bitmap' w='5500' x='25250' y='26417' />
+        <zone h='7667' id='20' is-centered='0' is-scaled='1' param='C:/Users/minia/AppData/Local/Temp/TableauTemp/0fv87ra0tp9twi13mcvr60smmh6i/Sheets1/Image/the-university-of-melbourne-logo-png-transparent.png' type-v2='bitmap' w='5500' x='52938' y='28750' />
+        <zone h='6917' id='22' is-centered='0' is-scaled='1' param='C:/Users/minia/AppData/Local/Temp/TableauTemp/0fv87ra0tp9twi13mcvr60smmh6i/Sheets2/Image/OPSM-logo.png' type-v2='bitmap' w='6250' x='67625' y='41750' />
+        <zone h='5167' id='24' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/SS logo.png' type-v2='bitmap' w='7500' x='75938' y='53000' />
+        <zone h='4167' id='25' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/deakin logo.png' type-v2='bitmap' w='3438' x='73688' y='59417' />
+        <zone h='4083' id='26' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/RMIT-Online-Logo-250px.png' type-v2='bitmap' w='8688' x='75750' y='63667' />
+        <zone forceUpdate='true' h='9167' id='27' type-v2='text' w='49000' x='500' y='19500'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='20'>P R O F E S S I O N A L  H I S T O R Y </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='9167' id='29' type-v2='text' w='19875' x='36688' y='69000'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='14'>S O F T  S K I L L S</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='9167' id='30' type-v2='text' w='24500' x='688' y='69000'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='14'>T E C H N I C A L  S K I L L S</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='31' type-v2='text' w='7250' x='625' y='74333'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Python</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='32' type-v2='text' w='7250' x='688' y='78417'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>SQL</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='33' type-v2='text' w='7250' x='625' y='82000'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Tableau</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='34' type-v2='text' w='7250' x='625' y='85667'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Excel</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='35' type-v2='text' w='7250' x='500' y='89417'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>PowerBI</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='36' type-v2='text' w='7250' x='625' y='93167'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>R</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='37' type-v2='text' w='7250' x='36688' y='74583'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Teamwork</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='38' type-v2='text' w='10063' x='36688' y='78167'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Communication</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='39' type-v2='text' w='10063' x='36750' y='81833'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Adaptability</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='40' type-v2='text' w='10063' x='36813' y='85500'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Leadership</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='41' type-v2='text' w='10063' x='36625' y='89250'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Problem Solving</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5083' id='42' type-v2='text' w='14813' x='36750' y='93083'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='10'>Time Management</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='16583' id='43' type-v2='text' w='55188' x='21563' y='2250'>
+          <formatted-text>
+            <run bold='true' fontsize='24'>ANTHONY KOUCH</run>
+            <run>Æ&#10;</run>
+            <run fontsize='16'>Entry-Level Data Scientist/Analyst </run>
+            <run>Æ&#10;</run>
+            <run fontsize='16'>Senior Optometrist</run>
+          </formatted-text>
+        </zone>
+        <zone h='18750' id='44' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/341523831_194494726711015_4259684196905406454_n-modified.png' type-v2='bitmap' w='17063' x='3875' y='1583' />
+        <zone forceUpdate='true' h='9167' id='47' type-v2='text' w='19875' x='70125' y='69000'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='14'>P R O J E C T S</run>
+          </formatted-text>
+        </zone>
+        <zone h='14000' id='48' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/GitHub-logo.png' type-v2='bitmap' url='https://github.com/a-kouch/Data-Science-Projects' w='13375' x='70125' y='79500' />
+        <zone h='15333' id='49' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/Screenshot 2025-03-03 214958.png' type-v2='bitmap' url='https://a-kouch.github.io/about-me/' w='15000' x='84125' y='77667' />
+        <zone h='4333' id='50' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/65a6560f146646659dbdefe7ae0c82ac.png' type-v2='bitmap' url='https://www.linkedin.com/in/anthony-k-444714229/' w='3938' x='92000' y='7917' />
+        <zone h='3250' id='53' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/github-logo (1).png' type-v2='bitmap' url='https://github.com/a-kouch' w='2625' x='92375' y='12917' />
+        <zone h='3000' id='54' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/tableau logo.png' type-v2='bitmap' url='https://public.tableau.com/app/profile/anthony.kouch' w='2563' x='92313' y='4167' />
+        <zone forceUpdate='true' h='9167' id='55' type-v2='text' w='13875' x='85438' y='20583'>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='14'>S U M M A R Y </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='44167' id='56' type-v2='text' w='15938' x='83438' y='26833'>
+          <formatted-text>
+            <run fontalignment='1' fontsize='12'>An optometrist and  qualified data analyst eager to transition into the data industry. With over 4 years of client-facing professional experience in the medical and commercial sectors.</run>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run fontalignment='1' fontsize='12'>I am to leverage my skills and interests to draw valuable insights from data to benefit both the business and client. Proficient with data analysis, visualisation and modeling, with hands-on experience with BI tools, Python and SQL programming lanaguage. </run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='2500' id='59' type-v2='text' w='15750' x='43000' y='23417'>
+          <formatted-text>
+            <run fontsize='12'>Hover for more!</run>
+          </formatted-text>
+        </zone>
+        <zone h='4750' id='60' is-centered='0' is-scaled='1' param='C:/Users/minia/Documents/Tableau/teddybearhospital logo.png' type-v2='bitmap' w='3688' x='53688' y='39000' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='3900' minheight='3900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='82' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98666' id='81' param='vert' type-v2='layout-flow' w='99000' x='500' y='667'>
+                <zone fixed-size='242' h='20167' id='51' is-fixed='true' name='bg' show-title='false' w='99000' x='500' y='667'>
+                  <layout-cache type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e6' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='225' h='18750' id='44' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/341523831_194494726711015_4259684196905406454_n-modified.png' type-v2='bitmap' w='17063' x='3875' y='1583'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='16583' id='43' type-v2='text' w='55188' x='21563' y='2250'>
+                  <formatted-text>
+                    <run bold='true' fontsize='24'>ANTHONY KOUCH</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='16'>Entry-Level Data Scientist/Analyst </run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='16'>Senior Optometrist</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='36' h='3000' id='54' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/tableau logo.png' type-v2='bitmap' url='https://public.tableau.com/app/profile/anthony.kouch' w='2563' x='92313' y='4167'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='52' h='4333' id='50' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/65a6560f146646659dbdefe7ae0c82ac.png' type-v2='bitmap' url='https://www.linkedin.com/in/anthony-k-444714229/' w='3938' x='92000' y='7917'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='39' h='3250' id='53' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/github-logo (1).png' type-v2='bitmap' url='https://github.com/a-kouch' w='2625' x='92375' y='12917'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='27' type-v2='text' w='49000' x='500' y='19500'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='20'>P R O F E S S I O N A L  H I S T O R Y </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='55' type-v2='text' w='13875' x='85438' y='20583'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='14'>S U M M A R Y </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2500' id='59' type-v2='text' w='15750' x='43000' y='23417'>
+                  <formatted-text>
+                    <run fontsize='12'>Hover for more!</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='7667' id='19' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/the-university-of-melbourne-logo-png-transparent.png' type-v2='bitmap' w='5500' x='25250' y='26417'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='44167' id='56' type-v2='text' w='15938' x='83438' y='26833'>
+                  <formatted-text>
+                    <run fontalignment='1' fontsize='12'>An optometrist and  qualified data analyst eager to transition into the data industry. With over 4 years of client-facing professional experience in the medical and commercial sectors.</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontsize='12'>I am to leverage my skills and interests to draw valuable insights from data to benefit both the business and client. Proficient with data analysis, visualisation and modeling, with hands-on experience with BI tools, Python and SQL programming lanaguage. </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='43750' id='14' is-fixed='true' name='Professional History' show-title='false' w='78923' x='500' y='26917'>
+                  <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='92' h='7667' id='20' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/AppData/Local/Temp/TableauTemp/0fv87ra0tp9twi13mcvr60smmh6i/Sheets1/Image/the-university-of-melbourne-logo-png-transparent.png' type-v2='bitmap' w='5500' x='52938' y='28750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='83' h='6917' id='21' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/OPSM-logo.png' type-v2='bitmap' w='6250' x='53688' y='33917'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='57' h='4750' id='60' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/teddybearhospital logo.png' type-v2='bitmap' w='3688' x='53688' y='39000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='83' h='6917' id='22' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/AppData/Local/Temp/TableauTemp/0fv87ra0tp9twi13mcvr60smmh6i/Sheets2/Image/OPSM-logo.png' type-v2='bitmap' w='6250' x='67625' y='41750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='41' h='3417' id='23' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/images.jpg' type-v2='bitmap' w='7500' x='67625' y='47917'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='62' h='5167' id='24' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/SS logo.png' type-v2='bitmap' w='7500' x='75938' y='53000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='50' h='4167' id='25' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/deakin logo.png' type-v2='bitmap' w='3438' x='73688' y='59417'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='49' h='4083' id='26' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/RMIT-Online-Logo-250px.png' type-v2='bitmap' w='8688' x='75750' y='63667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='30' type-v2='text' w='24500' x='688' y='69000'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='14'>T E C H N I C A L  S K I L L S</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='29' type-v2='text' w='19875' x='36688' y='69000'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='14'>S O F T  S K I L L S</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='47' type-v2='text' w='19875' x='70125' y='69000'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='14'>P R O J E C T S</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='31' type-v2='text' w='7250' x='625' y='74333'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Python</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='37' type-v2='text' w='7250' x='36688' y='74583'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Teamwork</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='22833' id='6' is-fixed='true' name='Technical Skills' show-title='false' w='35938' x='500' y='76500'>
+                  <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='266' h='22833' id='8' is-fixed='true' name='Soft Skills' show-title='false' w='33563' x='36438' y='76500'>
+                  <layout-cache minwidth='100' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='15333' id='49' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/Screenshot 2025-03-03 214958.png' type-v2='bitmap' url='https://a-kouch.github.io/about-me/' w='15000' x='84125' y='77667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='38' type-v2='text' w='10063' x='36688' y='78167'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Communication</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='32' type-v2='text' w='7250' x='688' y='78417'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>SQL</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='168' h='14000' id='48' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/minia/Documents/Tableau/GitHub-logo.png' type-v2='bitmap' url='https://github.com/a-kouch/Data-Science-Projects' w='13375' x='70125' y='79500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='39' type-v2='text' w='10063' x='36750' y='81833'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Adaptability</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='33' type-v2='text' w='7250' x='625' y='82000'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Tableau</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='40' type-v2='text' w='10063' x='36813' y='85500'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Leadership</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='34' type-v2='text' w='7250' x='625' y='85667'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Excel</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='41' type-v2='text' w='10063' x='36625' y='89250'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Problem Solving</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='35' type-v2='text' w='7250' x='500' y='89417'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>PowerBI</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='42' type-v2='text' w='14813' x='36750' y='93083'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>Time Management</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='5083' id='36' type-v2='text' w='7250' x='625' y='93167'>
+                  <formatted-text>
+                    <run fontname='Tableau Regular' fontsize='10'>R</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{840D62C6-224A-439C-8C6C-62106225304E}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Technical Skills'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Tooltip:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3F76531A-4F60-4308-B92A-6810E196162E}' />
+    </window>
+    <window class='worksheet' name='Soft Skills'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Skill Name:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Tooltip:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A6A4B3C8-45A6-4370-B6EC-A66480E2722F}' />
+    </window>
+    <window class='worksheet' name='Professional History'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Organisation:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Title:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Tooltip:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[none:Type:nk]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[yr:Calculation_765330514643480580:ok]</field>
+            <field>[federated.0sp88ps1k4tc1610ybosj0b9nn53].[yr:Start Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{831370F4-3C8A-433E-BC7E-494B7BFF43FB}' />
+    </window>
+    <window class='worksheet' name='bg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D01A133E-72A6-45CA-A490-D02B34C15851}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Resume Dashboard'>
+      <viewpoints>
+        <viewpoint name='Professional History'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Soft Skills'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Technical Skills'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='bg' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{02FDD99C-F7EC-460E-AD65-0B2E158A4451}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Professional History' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAC3ElEQVR4nO3csWoUURiA0buJIAi2Yi22gm/j+4gvYq/YqKVCGltb0wRJYaHBhJDEpJix
+      EMsgwrAD+51TLdzl3in2gx+WuZt5nucBUXtjjDHP89ABRXt/P0zTtOZzwCr2/v0V2F0CIO3O
+      0hueX16Po2+nS2/LFjx59GBsNpu1H2OrFg/g8PhkPH95sPS2bMGbF89G7PdvBKJNAKQJgDQB
+      kCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkLb4S/H3790dTx8/
+      XHpbtiH2QvwYY2zmP8Y0TWN/f3/t54GtMgKRJgDSBECaAEgTAGkCIG3x/wHgf739dDgOPn9d
+      5WwBsLrvPy/Gl+OTVc42ApEmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASHM5Lqv7cXY5Ts9/rXK2AEgzApEmANIEQJoASBMAae4GZadNV1fj7NXr
+      W9cFwE6bb27G+bv3t64bgUgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDS
+      BECaAEgTAGkCIE0ApLkblJ02XV+Piw8fb10XAGlGINIEQJoASBMAaQIgTQCkCYA0AZAmANIE
+      QJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoA
+      SBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0
+      AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZD2G+YvbOIy/uWFAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Resume Dashboard' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAgAElEQVR4nOy9Z5hcx3mo+Z58Ovf05IiZAQaRSEQgAhEIMEuylSxdyev02PK1r+569672
+      7q4fP7sry9daX13xsWXJCrasYFu0JCtSiZkgABIkCBAZGITBzGBiT/f0dO4+sfZHI3CIQFIA
+      RVmc91efOnWq6lTXdyp8X30lCSEEc8zxNkV+qwswxxxvJeqlHxMTE29lOeaY4y1hrgeY422N
+      +tpR3lqEEFyapEiShCRJXJq2SG9dseb4FeGXSgCEEBTKVfKlKhXLxREehioRCoUIh0MEAzqK
+      quL7PtWKzYXJIlXbRUGiMWYQD6no2lynNsfr5y0XACEE07kSI8kMyZkcCB8FGV3XMUyNkGkg
+      K1V0Q0PXFWRZxrZt8sUqo1MFTo0UcDxB0JAJ6Ro9rWEWz4sSDyjI0lwfMceNecsEwPcFZ0Zn
+      6B+aJF8qYKgygYCBruuokoQQEo7lUZIcJEVGUytoqg7CJZu12HU0xcsDJVzh0xjTSOga4ZBG
+      xXJI5y1Qo6jCx1Q8dHWuV5jj2rwlAjCULPGd50boH68Q0gU99SpNEQVV0YiEggQMDdv1sSyX
+      qivhFl2qts10scBExmEobXNqzEIIlcawTDwgEw5oyEKgaRK24zKWzFCp+kzmHKIBjfULogQN
+      5a143Tl+ifmFCoDj+hwdzHDwTJqIIRM2FUYLUHYl8pbMQk2jvSVMNKBTshwqtkWxKnB8SOZc
+      ck6VYgXGiz6SpxHRBfURlWW9QS5MlsnaHpmSR7bk40twZrREoSJIFmy+/WKaP9jRxu3doV/k
+      K8/xS450SRP8ZusBZooW/aMZbMsjW3aZztvMlFwuZH1SJRlVk2kIKPQ1GcxvDVB1BefPD3H8
+      0D7y6STlcgHfFxhmmHBjB2r9IkJ1zTSKMRbPb0fRTIq2hiur5Io+FzI2mYqPhMDzfCRJQpFl
+      dq5I8KGN9WjK3LBojl9QDzCaLnDsfJKZvI1ARdUU4kEFSZJwBeQdQUXITDsK1SmZE6MTnHvu
+      3zh/ZC+e56LIEqamEQgaNCUSBI0SRnWQmZN58gLc0VbCdc3IRh2R3g14koapq+iui/AFQoAq
+      S8iSxHOnsiDgfesThOaGRG973lQBEELw9NEUz5+aAiEwNUG25IEio8kSkiQzVZaxhYIkqaBo
+      nHjyCwweegbf90EIJEWmLhQmHgkSCQUIaDKSAu3tzdhOFeELsjM5FEkiXOeTn04yrbQifBlN
+      kgmZMhXPxVQkXOETCaicnyjw9WcdPrSpibrwW74QNsdbyJv67z97fIpHX55isiijyBKKDJ4v
+      gVy7VmUFX5LRNRnb9zn5yKeY6H8BIUkICVRVQQjIV6qYhkZ9PI4reVTKFuNj44yOToCkkM0X
+      mdfeiKyO0bumlaWrFxDSZEpVB1WRiAdkDB1CQQ1NUylWHIolhwODBTYtjM71BG9j3jQB2HUi
+      w2OH0siyjIuE60sIH4QsIQkZ2a/1AIas0hxWOLTrYSb6XwQk8AWqouA5HpIqo6kqtuNRKpeJ
+      RkxGJ9OMj7vk8mVsx8UTghNnBomGw8xfkiQR0dBUieaEQtCU8D0PAYRMjZCh0hQ3SWWLlCse
+      R0eKrO2OoM0tlb4teVP+9f7xMk8dyyLLJp7QiARUwqaGpqtomoYsKwhZAVnGlmXSyVHOvvCT
+      muLKrw17PATIEoqoNWDPcVAAQ1cJaCqW5WBqCp7w8T2PXKFKuVIhGguwcUUjy+fH8T1BueIR
+      0FQCmoQqg+XZFMoVFEmiszlKJKRyLmUxZxX+9uSW9wCpgsvfPZmiWPHwAE+AJMkgJHxkJAGS
+      LCHJMiFNIR4JsvsHX8VzXCRZRpGki72Ej64oCCCgQFST8CtFwrbEhmVtdDfFUTSZ/sEkjx0a
+      YCjlISsKTY2NGLKKasos6IyTyZcRwkVRJVQFNMXAVXwQVUxdoT4aITlTZroiaAi+eZrjdHKc
+      YsWmqaWdoKldDs+kk+SLFVraOjH12lDMtcqMJmfo7monOz1FtlC+Kj0zGKGlqZ7x0WHCdc1E
+      Q+ble8nxUYxwHfHolSVfz7EYn5hEUg3aWptnackv5dHU2kHQqDUJz64yMpGma14Huekpyg60
+      tzRdKYDwuDA8Qn1LO6FXvE86OY5sRknEwgA41RJjkynaOuehK7U87WqZieQUuhmmpamBVyrs
+      J8cuYEbqZ5X9Wu/jew4T4xN4KLS2tqKpcq3eJtJ0dndxaVDruxYXRido6+xGv8ZIV/n4xz/+
+      cYBisXj13TeIEII9J2fwnTKOB2FNxlQBJBxRW/URqowiK4Q1haipgJvnwCN/j+e6IIGiKAQ1
+      iZZIAF2WiRg6bbEAPQ0RNixoZufSdjbNT7C6u571q5ax9c61PLBmIb4kMZ7Os2HzRub39iLw
+      iQYNiuUKrueiagpCCGIhk1jYoFy1CJoa4aCB73tkimWCuvrmLI8Kh6998fMcPnEKgvV0t19p
+      SHsf/yE/evRpXD3GgnltAOSTQ3zxmz9h++b19B99iRcOHGZo4Ay7du8hmc4wemGYoiOzoLuD
+      b37l79Dqe2lvil9O84ff/Apl7Uo+544f4Ctf/xcujCXpP3aIPS+8THt3L/FwEIAXnvkpP/jp
+      E1SlIIt6OwCoZEb5/Fe/x51bN1BOX+AfvvpNFq9cQ/hiYx86dZBv/XQvmzauQ5WvtODHf/hN
+      0naA+V0tADz1o29zZDjHmhWLkIDDLzzDPz38HSamUhw58AIHjp6me8FCQqYOwHf++e+pmo2z
+      6ujV73Ph7DG++tV/4szQKBfOn+WpPQfYsHEtxeQQX/zKd7lj+2b0i8+6+SSf/eJXWHHHdkI6
+      V3FLe4DhVIV8sUxvo0l3I0yXXHJl8JEZy8lMWiDLEqosEzbA1GF0cBgFD1/2cWyLYDjE0o4m
+      wqqCKoOEIBwwmN8YY35LnLCuIXwZq+pjC5Ng+wIW9NzGR2LNVLwf8OiPH2HVxjuJBEyqFQtD
+      krFlgUJtKVX4HrZDrSdC4LherTxBkxnbJ6DKSLfYhmh6dIC82sg7Ny9kb38/29ctm3V/ft9C
+      Du3bw+b1q4i8akK+asN2Vm0ASik+/j/+jne+/7doj2u8XgrpUb79/Z/xwAd+m9WL5oEQvPjM
+      T/jmv36b/+VP/gjz4le5t28hx1/ay5aNa4gHZ6ff2LWE2xe9yJPP7OU3330Pwnd46und3HX3
+      +zCU69fVxPljHDid5A8/+n4kYHLwOD968kU+/Ht/yPz2BoTv8fgPv8W3vvMIH/2DD72u8Xgx
+      M87D3/ohO979IdbfNr8WVij83GP5W/a583zBRLZCS8IgHJJoiGv0tQaZ3xpg09JGlrTrtIUU
+      NEVFkVVMXaavHpZ1JNA1Dc/zCJgmizubmdfUQFtjPS2JOtoa6mmrjxMwdKq2IFv2yVQ80gWL
+      qu9hV0s4lSLdSxbxa3fdQUvEZOj8ANOFIul8Htu1kH0f27KxHQcfQblqoagy5apDajpHoVTB
+      93wEUPZuVY1cof/UKRYsWkTfooWkBs8wU5mdSaK9j9u6Ijy3//Atz/v44Zepm7e01vgBJIn1
+      2+7GsFL0D4xfjhdtmsfqvmb27Dt4zXS2330fF07sZ3gqz9mj+6kE2rh9afd18/WdMo/86FG2
+      3PtOGiK14dmhgy+zYMU65rc31IoiK9x1z93kR09zYar0ut7nyMH91HUvvdz4AcKRyM/dkG9Z
+      DzCVr6IqPr7vEw4ahE2dmZJFR8BE1wSruwO0JTxSeZ+6qEFE8xCuw7zWXk7duYWnn3iCpkSC
+      1kQdAV1DAVRZQVdk2hNBgrqBjMAMmmiqSjASwHccKtPTiLo4qmEQD2ks6+umOj1B06rlSEKQ
+      L5SxChZClsiVihfHmxKO55C1CqiyiqFpaL7At2CiUqW3PnwLLUk9Tp06wx3v+l2MaBPdTQb9
+      ZwfZuGLBrFhbtm3nC//8IzavX/WGczhz4jCl1NDl6+l8lfaLv9PpFG2tS2bFlxST1qY60tNp
+      uBwTNm/bzue+/C22bFzDq/uYUF0rW9cv44nHH8NJDXHP+3+P6338Lwz08/2Ro4h4D5tWL7oc
+      nkqn6FqzdlZcPdxIQ1QhPZ2mu+m1zVSSk0k6O2+/QQyb53btujwE8qr5G6Z3S3oAXwhG03ki
+      QZ14WEdXQJIEquIRNmSa4gHaEiG6Eyqb+wLcPi/I/JYwfZ11tNQF+chH/4S6ujrCQYNo0ESR
+      JAzdQFN1DE1nQWM96xfOo6u5AUMzUVWDulg9ii/QJAkkFSeTIehWqIsE8ZwKjbEgTXUhWhMh
+      6qLh2lKoBMmZGTLFAgFDp7muDlPX0RQZVZEpVMsoEri3cHGskBxmomzQN68JkFi4aCH9p/qv
+      ihdvnf+m9QLX4lqLXpGGzhv2Ands2Ulp/Axm+1IWdTbcMH3P80H4s8Kk62xhEgJ43Ytwt3a1
+      7pb0ALmyjV21kEMGmq6Rz5eoVi1UTUbTVCQfcH3CQR3bdrDsCpqiISGD72PoGuGgyaK2RqIh
+      A9uBovAxFRVT0xnOOAi1hGU7DExmCBkqtmygRVy8qTItbRXaNI8WTWVV3OThk2cpl6uEggaB
+      gEGLIlOoVClWKgjhY8gyxWKFUMgkGjCpODaS5BMPaoRNDUmRwb81Y6H+U6fwrCx/9Rd/fjlM
+      0iKUnHcQ0mY3iEu9wG0d97+hPBYuW8W6Zd2Xr8fOXhGipqYmDo6Mz4ovvCqTqRkWNzReldal
+      XmBN369fdU81I7Q1xYm3t19175V0zV/MjnV9fPkLn+eZfUe4e9PKi2VpZGJ8HFh6Oa5dTDFd
+      8GhorAmUqqk14XkFnudhGAYAzS0tHB8dAdZdJ3edzdu3c6kvcbJj7Hnh5euW9ZYIQLFcJRbW
+      CWgyAhlJkSlXLSKKgeT6FNwijuNSdBwc10VRZGRJQULGl2UmRi6gKxK9bW1YdplUPkOhXKFQ
+      rhA0NC7EgpxPmsQDAcp2lTOTRZ45fgbhC9Ytm8+m9cvRVGiJmDRFVaiUGB4dp6Euju95ZIpV
+      MrkiQhIYuoasSDVTC3xc38LzfExDQ5U1KpZHyS7REtYwtZvVEAtOnernwff/Dutv67kY5PLF
+      v/4UpwdGuX1x56zYl3qB3fuu/4e9UZatvJ2nnvsKh04PX5kEP/skdqCZxb2tV8W/1Avs2vvS
+      TeWr6CHe85538Q///AMW9XXT2Rhj1e238/f/8iMG1q66OAl2eeaJJ4l3LaarsdZkO9o7OHny
+      GFvWLkNXZWYmBxmZKrG9rVbWlbevY/cXvspLJ1exbmkvAMV8nmA0+nOV86YFwHE9ypZNQNeI
+      hIMgQShkcG4kRb5coWzbCAFC+Jf39AJ4yMiywLItUqk0qqoiI1ABQ4BqBKjTDUrVEtV8npxb
+      JaQpCOGjuQ4RVSUQDBLXdbxigQmrjFENEYrFMRSZfNFCSGUc26Hqu+imTkDTMFQFTwjKjkW5
+      6qAotVWfStXD0Aw84ZErlcDV6G78+Sr1EpXMGENTNu9a0HUlUFJZ2Def/v7+qwQAar3A337p
+      nyF09df55yFc384H3vMA3/veN3ixvgnfKlHxNT74wf9weQXo1Wzetp3P/N0/ghq/5v3XS1PX
+      YratXcT3vvcD/vgPfpvm7mW86+4pvv21L9HQ0kolP4McTPDBD37g8qBz47a7GfzGN/jMZ/6W
+      hroIExOTrN/5TroaQpff58O/8S6++8Nvs393AlMRTOV9/uvH/vjnKuNNm0NnSxbZcomm+jp8
+      v7aBvViyyJZtylYFx3apVGwsy0bXVUIhg3AggKGqmLpByXFJJdN87pN/wZYF7YymUkSDOslU
+      jolcBUNTaIgFkJwy85obEZLPyFQBWQpyOjlDPBRhZYPHOzYvI6CbdLYk+NnANJvuuY9RpZ5C
+      qUQ0EEBTNRTZxdA0XAGlio0syyiyTChogKTiC0EuX6Rq2QRMk2XtdT9XnVyiWsqTnCkxr2P2
+      l7aUz5IpVOlsbyGTTiLUAPXxK8I2PjqM7at0d71iqOHZDI2M09rRhfEKs41bpQhzJYOGROxy
+      2OTYBaquTNe8jlkzoqnJMdRA7LKi69W8WhF2SRHV2NxGKFCbmt5IEQaAEKSmJihVHOobm4m8
+      4t0ucasUYTctAMlsGU2TicZCeJ6PpipkZkoUKi6O7+EhEL6HoevM5IpIMigCZEUGz2E6NcjA
+      rr0cO3Oevp4WitN5LMtlcqZIwfKRfFAQ1MUUVnc2sGbTar7/2AGmpqbxPYX1CxbwoXevBg+O
+      nT1JT1srh04NEjt1gq6//DwTeZu6SIBENIKiSuTyFcpVG4GM5dhomkZDNEjF8XF9gSJLyLJE
+      cjrPktY4ujpnKPerzE0PgXLlCrJwyRWKxGMhAoaB6zu1r2mxhOt6qKpCtmABIOFh6jqdrY0c
+      3v9TXtr/KG1OiJjs4Vkesm4QkDVa8WnxfCzbxRMKebtCQFdpViV65zUS9gSyJ0gYHn4FlLhK
+      e1cHXVGF/akkwXgUTdVobQgQNHQ8z8VxBIWqhVWp7TNWZYnm+gixcICpTIlCroSmKgQCOiFN
+      Y2wySU9H201X8hy/vNyUALieT65cxdQ1AopEJl9F0wVly8W2bFRZQdUVbM+jWq1StV00VcU0
+      dPIVm/6zQ5hGmFBLjMC5UUzDwELCVCVUWcJ1bQyzlo8oOxQdhYIlsW5+KwO+RG4mD36FsdEx
+      ljV3ka4UUBL1iMkZ6u/bii1kZnIFSpqCoRnMFMsIqTbx9n2fgGkiPJ9CySJfKuMhUADPFUiK
+      iufO7RX4Veem/uGKZZPLV7BCHkhBPN8mrOnMVCQsodMbN4gEVcqWiyfA86Di+xTKgqlMlVRq
+      hlxmlNaOFnxbIAkPAx9JN9HxUBWJquMzlUnT1ZggbgRZsKCb5OQE2x/oIXPmLNVKhbYFjZyc
+      yLK8pR4hfFavXsJjqSLNB/cRTDQTjTXh4eJ4HqqiEAsFKRQKzGQmqVZCnDndz47tOwkFNY4e
+      72d4JkXFkTh97CX+tz/66K2q6zl+CbkpAUilxpkYOUNzx0J0RUdSwLZdkGQEBjOWT95ysV0L
+      Q/Z5ae+PWbZqI2poHlnLYyI5gaKoNDTOJ3RfnLGRAUK6TKVUIm+5FIplqqUCrXUx4kGVXH6a
+      F598klhzM2o+z+T5CQqKjBQpsHZ5D24hifB8jCXz+fJffZmNq4fZdeAg77jnTrbt/DCRaJCW
+      lh5y2Rn+4cufR5M9Fi5cyj9+5R+pWiWq5Rzf/sFjFPJZFi1chu/Yt6qe5/glQHg2hYpHNBy4
+      HHZTApCZnuKlvd+mLh5BCzTQ3NqML8UIJLrwnQKHJ4cRSpUVa9/Hvie/zcDJFxkYOMSixbcT
+      a+7jwoUR2puCZGbGMZt6YOgkkiQR0cHwPWIRGUsPoqsee198mfkt9aQyKQ71P8UHNt1GueJS
+      8D08z6a7TqYubmCVikxWdHIli31HBpjOWKSTVZ78yXfY+9J+tm3ewkQqxU+f2ocuSwSf2UOp
+      bPPZz36G5qYGBgbGsRybycm9rFn9xs0SXs3BF3ZTqNYUO23dfSzsvlqJZFdLOGiXLSJfL5MX
+      hoi3d2PexDy9mB5lsmqyoKOmiLJLWZ5/6TBIMp09C5jfdb05kEc2WyIev/FSsfBdThw9wnS+
+      TFfPAno6r9Y99Pf3s3jx4tdVXt+1KFQ9YhctWa/3rGuVqXoK4aBxOWzk7EnUlkVEgaGzJ5HC
+      TTcnANlckUymxEy2DNIUR44coWq5yArU16sUcjbRkMbQ6aMcPjREZ2eY3HiSl6cewxY/wnEq
+      FEo+5/pfZHTwGZbUNWBIKr4vsJ3aao1hhrBcQV93J5os8FzBe7ZtZNHibp55+SgV2+XcWJKF
+      Uwk0OcbuI4N86dEDZDJ5iiUL2xecO3+BZCaL43mcOtrPVHoGz/WwAV2SsVyfTLZMIFClUqki
+      hMSmTWv5rQ//1s1UDwAFy2f79u03jJObHGKKJpZ1v7G1/8mRIczWmxMA16pQrFxZh3TKWUKN
+      3axd0smZ4wfZN51j4+ol13iyypHDp9m2/Xoa2RqH9u+jsfc2li4PMzg8es04r7fxA3jFNMeH
+      ymxe1XfDZ4vpMYbKQVb1XfngjGerbFgcAASjk2k8f/rmBEBC4Loe2+9oQ/ElMoUiY1MVzo1l
+      sS1BKKQyNV0hZE9RcT1sx2NBTGcwV2DKLaGbKmXH49DJKaanbQx0liYSeK6H53s4CtieA4Ae
+      MpE8QTiksmrtAhINDcQmkhTGx2lprml8i5UyT50Z5elzFxBCwndcVGTGChW8YhU1HKY/oNDV
+      101z1cIUHnkBYSEwAiESjU2sQuXUaJKTp/r57r99g/u3rLmZKrqKUmqIHz57hPbGODPZAg88
+      eDcHD58gzxCpsUa2b17NM0/uQZI8mrsXcuFsP/fefx8SHk8/vYcdO7ZfN+2RcyfoH0riuxbL
+      191JdvAo9QvX0hw1eOm53Sy7YwunD+5lpuxi2R537dx5/f9WVli0Yj1PPfUUgiWcPLyfqZkS
+      5VKJ9Vt3MnH2ZQaHLiB2lVi1bhOT548xkc5TLZdYtXE7rYmaHkCRYCabo70xzvzemjb8/Kkj
+      nB1NoSkS6+/cycF9u9i2bTtTI+c41D+E7LssWL6OnkaFf/nWY3R1tpCdmWHLve/g9MGDDKQc
+      nOwEG7Zs5cW9tWdPHdnP+HQJhMfaTXdy8OBRUo5GdmKELVs3IMoZtGACgGJqmHBzL+704M0J
+      QFMiRsBQKJXLmKaK41uMpXIUylUKRQtDM8iVqoQr8O4HHqCay7DqrjuJXDhL8rlnkasOVlXG
+      tSRioQRBKYKsyDjCxzAMZvIFMukUYdNE0nR0Xcd3HU6fHMAIjjM4eB4Pn9b6LhTVRzGCyJbK
+      R3dsoTMex3M9EgEDTdPwHJ+iGUEPeBgVB6e9Gd+tkHIEI65MIqGTGkmitsXYtLAbD40tW7fe
+      TPUAMD0xwq5duwDo7ltKow59S1awblkPZw4/R942WbNq2St6AIfkZJJf/+AHCGgKemmSoWSe
+      Om+K+s6F5DJpZvJFEo0tV+U1MJrinrt3gO+w5/kDbFyzlBeO9tO8fhlVX8V0s+T9CDvuWkVp
+      apCT50bpjdy4/Iai4AFLlq8mNj5BOTvJuaExNq65nZmCebkHiC1bSWRsHKs4zZnzI7Qmar3G
+      yvWbOdd/gscf/Rl1Ld3csXoxQxMZ7rvn7qvyOjkwyr333I2Ez549z9PTeBsdPYvYunkVU4Mn
+      SM+UWLNmDd4reoBL5PIFGpvb6enpJhIwWbNmxawe4OTpAfqW1qxIzwxOsHTNBrx6/+YEoK4u
+      xsrWVhZ1r2F86CSFXIHm+ijxWAy74rN51WqOnDxFe3OU3OgAuYzDi7ueZDiZZUVrD6vv24Qu
+      eaiKxdjJI4wfm6Z7+WLODk7gez5Rw8BsMfEsgVt28RwPV9HQ5BilikvZEmiKT7VSQog6hk9P
+      sUkJEa/TmfItclaVcqlAXTxOMVXB84qUZYVsappwLIibq6DJ0OWCGtDplDT8Eki6gy257Ans
+      Z8uDD9xMFVHf2sn2bdsvX9fMlmtDjusZXLd2dBG4aIfUu2wlz+x9mZTms2rDnVSy6evmNZMc
+      vSxs8cZ21EAdfvUo6ZGz1Hf1IRyLocGzCCsLQHffMqB6g9ILqq6Lisfjjz1O98LFyJKM773a
+      ItPn6ccfo2P+YgxJQrzSClSSWbBkOQuWLOfFXY+TdxYhy9cesxVnkjx7sfyh+Ozh4GtZp2+4
+      cweTE6Mc3Ps03Ss3M9uIQ5C3PKKGAvhMJSfJ73kWuMlJcNxMcI/TgXtkmrq8QY+2AFlVqXdl
+      ogkJ88Hf44HAbqzho7xQnuGfh0f5w7ZWAokYfrJK8LkTqIqGEgpRGTXRqzKrZuIMiAlsz0FX
+      ZVRNQjYl/CC4tockbLKFETauW07GmiZXKiI0iSoKo0+kUUSIXAYMdGKSgSYUzKxJhAhVxcVX
+      JIzmBjzHJxcoE7dlKpKPXBE4SHieQ86rYgiFRuPmTCEAKoU8Q0NDAETiCa5W6tfC9+8/QYD5
+      9HbP/rJLiklUcyjLYXQZ9EQDscQlU2TB6PAQWRXqGprontcFoQbCukTFr7WY7qYITx26wPt+
+      bQmK5NGRCNLa3oFTziPJMvhcxXRqksHzHhfOn2PewtWAwPNBlQSTqTTUxQCTUmGC8wMDtHTO
+      w/UEmgzJiRQErkyc+48exJaDhEyFdEUiqCpEDcGh46fQ/SrzFq++HLe3ex5FQtSHdXKVaxQM
+      UEMxpkeOMhBWmbeg53L4scMHMCIJggET3/cJxeoYOXqEsOrRHPYJN3YDUJi6QHPfWlZftMO6
+      KVMIv2oz9T9/gZAZRpUV8ppFwqinOp1HxBWEpBNwJGzbYUZ10T0FCQdH2FRtl6BsMNPg4tWF
+      KKVS2Gqe1sXzODc+Qf/4ICAjyxK+EEi+jGO5OL5DLGiwY/0SVFPFcixsxyUiRzj84xGm/RK6
+      q5KoCxOuD+OHFXRbITdcICdXidaFCDfr5Cbz2MIh2BggU80ilDK24aPHFXJuHnyHO+/8MOtW
+      v/cN18srGR8dxnZrX8xIPEE8qFNyIBoyKRdzqIEYugK5TIqiLWhvaSCbLRCPX7HLGTpxELl5
+      EV0Ns+1virkM6Znaho+6hiZi4QCp5ASWK9PWVrP3EZ5NMlOgpbEeqK3KjI2NowejNNXHr1ot
+      8ewqI+OTIMk0t7YS0GtbY6rlAlPpHK0tDZRtn1g4SLVcIJnO0t7egWeXmEzN0NbSRKnqXrFD
+      EoKp5ARVR9De3oYiS4AgNTmBr5g0NybIZrPE47VvdiaVpGi5tLe1oeCRLVSJx8LY1RKuZBA0
+      VEr5GabzVTo6WslffNb3HMbHJwhE6qiP18Z1+Zlp8lWX5MggK9ZuQJOhXMihBKIY6sVe+GZt
+      gQ7+P1/FPjlNcySK7Akqrs20UiLoyoyRRxcapiNTlV3kiMp0IYenyixf1EX7xjbGC+Msunch
+      qVyS5vpGbGGz5/ER+p8/hmVVMUwTIYHny9i2Dzgs7mph/ZJ2NFNhIp0jqGh0tlJHUz8AAB+2
+      SURBVLQwmo0wPjLCvM5mAg0umiHjaxL5GY9KpoBpBhAKzGQLCLdKeULGcyzMiIZQHAwNzLog
+      luQjSrDwrgeItsx/zTp4Mxk8c4KJvMumtSvf0nL8u8V3ePHAMe5Yf+1dZDctAD/87hcYOvAS
+      jiroE/VMxnLkqKB74JhgBjU0HSTJIxzUcYXHbQtX09LSTH0sguv62I6FLEvM5NOcOCbz9Pef
+      pyduIHyXquugGTq2J6hULXzfR1UUOhpjRII6Ttni3vWLKFQsSlKImekI9mgFV7ZJRCKIiEc2
+      WSLSaiIEmA0+qiHT1hGjMO3jWRKVcgkpXCYSiSO0ANPJAqVSiQ3v/F30QOC1K2GOf7fctACM
+      p/Zz6NQ/oWjyZX+etc1vAuEreK6LoqoIoC7aiO/p1Nc1MHThNIvnL+Dc8DkWdC2hUHCwrHo+
+      99c/JegV6GuJoVM7D8x2LFAUkGR84WPbDkK41EeDbFzcxaKeeoRi8o//tpff/y//K0/8wx5M
+      Q8cqCzRNxsJDNyQmvQkaQzFwdSTVwStrKL5MRp5mQV0PSl2FSIdCKGRiBBK0rLi5CfAcv/zc
+      tLVXfWwJkgOeY6PrRm1pwxNIEng+BBQDy7KQJYUTh4c4M1wiaHjUN+vE4/XMa+9jMpOms2U9
+      33z4ONPpFA2tMTzhI2QFWZLRNQOER66Yp1CuEIkG2LJyPo3REM11EVRFxgybHDhxjgcvnGXH
+      f3oHn/rkp2k3m4nJIWRk8k4eOWpRzFtohmDCGWUwNcrSyAqiZpD+iSFaCDM9rCOiOVbes+C1
+      Xn2OXwFueve3oUfoiC8jZBlIMw7ajEegJKGmfEI58CYslIzATlYZOJnmyJExTp/L8fzzU1wY
+      n+HkuWGi5nqe2pWjlMsSiSawXRfb9XAv7iLTNBXTUEhEIjTWRVi3uAdNAUMRSJKHpimMTk5T
+      tmxeevEw7Z0h/upv/oIlK+eT83KopoRajuBkDDxPplSqUl9pZkn4NnKlEplimXgowkzKQ9WD
+      yOUQobqe137510F6coTdzz7LwcPHqNqvd5+xR3//mTeUj/Acjr78Erv3PEc6W7huPNcqUyxb
+      byjtG5HNZq97r7//6s3/b0YZboZb4v6gt/VOWp06YpU4oVIEJRuArElhXGZ4yOHgyyW++t1z
+      HD2TxaoIcmmXeGw+jrWKXGYTB49UqJarIDzMUAQ9GMNyXSy35tRWwkNXFAKGzMKmBImwgYRM
+      xfKQZAXbcXjypbPopkGuUGTgzACJhjDv/+j7+eP/9nuoq1ROm8dwYhlcxcNHQUQFUsjHMot4
+      mkVl2kPyZE5PDlDQHeItN78l0S1Nc/DUCJu3bKW3o5Fi6WoXh9dGYfHihW8orz27nqK+YwGb
+      7ljD4X27mSld25CvmB7j3Nj1dQlvlMNHjlz33o3MFG5lGW6GW2LwHmxeQsGN4dqF2t5fJDTV
+      R8KjOWigOGWWtXoMTeVY1tdLW88azFCM5HiBUMgmFNCxbQtFUTCDcSKJKG7yMFXHwVQUdFVB
+      lSUUSVCqFjl5rkI0EiTQHmMmX2JkWnBicArDNHBROXLsNH3LFqEqGg11TfzW+36TB+96kJEL
+      p7HVDNWqi+uUaW7q49ShFOf2jmMFypRmytQ11LNm2/Zb4x1OkqiWi1Qth7qG2vq+XcryzJ4X
+      0HSNaEM7a1cs5gff+VcSTW1Uinl6l2+gr7ORZ5+tqfhPHHqRiUwJ17ZYsW4zjWqBPcdH8co5
+      Fq1YQ1dLPTgFXL2e9qaa3mLrptXs7x9gdVeAH+0+Rmt9mHzJ4t77d7zKROAODux5hpIjYVk2
+      m7fvwEqe4dmjF2iMmmSyeRoSdRRyGZatv4v2mMTTu55H0zWCdS0saI0wNDjILiFobOsmLmUZ
+      LSjk0pOs2bCF44deeF1mCm/lnrtbIgCyotLct47hA4+jKAoSNZcwvi/QNZlQKEKss5O1Kzpr
+      Gj3fx7MqaJqKLIvavMF30AyN+kSQ+nlLmMoOI5wctudRr2oEDRUVBdfzkISPL3yiwQDjM2Ve
+      PDWOJEH3giV4sorrQmYqRUtnF8Kp4lsV3EqJeZ0LEbrDcPIkjh3g7OBZtJjJe//3DfzT179D
+      ulyivk+je/XrN866EWowwV0bV3Fg37OUHYk7t23j3NGj3LH9HuKmwnN79uCzmFhDK1u3bgM7
+      y3NHxujrvNj7+FWmch5379yB8B127X6BxlW9JNM5PvDr9152TOVWiuihK1aZeiSKWxwHAsxf
+      vJx1y7rJjPRzemh6lolAdWYML9zBjtULccppXjjaz+JmmSUr1rKsu5Fnd+1iy9at2NkxjozN
+      UBweZfWWnTSGNPbt2UO0ZRndPT1s37YNqLljyZVd7r33nln18FpmCm8lt2zLU9uS9Uye3Idd
+      rnlfE77A1+MUAi3kwxHMchkhPGRFxXFcDD2EJ3xkWa6d4SUEuq4Tlg0EOsu2fZgTu76B5eQJ
+      6irxoIEug+N5FDyXaMAgnojy5MsjOI5HtC5BtGsF1Zkh+s9d4LblfbTMm4dETY0eMHUsq4RT
+      8JkXX0nZnsauCArVPP/4L19l5447GZ0o0NW5AUW5dTvBookmtu24B7uQ5PlDpzCrFV7at4ea
+      SyAND670NldtDneR5JoiSpIvfiyAru6eWV7Z1HAd1ewAUPPClk8mCdbXz0pKUVX86mztquvY
+      aEbNBFvVTYRjwzV01ZeysqwqL7/4HIYMoOBdY0rT03P13OnGZgpvLbfMBZqi6XSvvw9VASMQ
+      Jh1YzKDUR8oJ4Ni1dX5JlvFcB03X8XwPTdORJQnfdZAlgappBE0NLRBECYbY8Rt/yNJN9xNt
+      aUM3asZwhmFiqBrtTQkKlkq56iLLMu/6zf9IuVwhEAkTCodxXa+2oUVSkBUZTdepVKr4wsd1
+      HUJGI6sWbqKnYymFkk0yXWLFbatZu+r6FpJvlHJ2it17X+D84CAvHz5BW0crCxctAEmjq6sL
+      w9Bv/AcoYVQ3w4n+M+x/bhf1bb3XjiebNEclnn/pEOfO9PPswdOsWNwNwMToMOcHzrL34GkW
+      dbfWTATO9XNu8ALhxk4yg8c5c26AXc/sofc15h3zFy0EIdPV1YWp6TWz94DCoROnmUxlrvvc
+      scMHyJft2WYKF8vwVnNLT4kUQnDk2R9zeNTGl3V8z8V3XYRf8xkqKwrVcgndDCCrKoqio8gC
+      z7Zw7RLCdxE+6A1riUQiNEcEiaigPiZjZ5OUB0+SGx1G0hUCqkqyUGVgfIZf+8ifcHwgw9lj
+      h7htcRNmUGPl4nm0d3Wi6Rq2W6VcKDE1laZccdA0nUDAJBQ2CEUiFC2f86Mv0962kUDgxi7/
+      3iiVYp5kOkOisZloqKZUKxdyTE1naW5tI2BoV0wBfJdc0SIWDV0JEz4T42PooRj18ehVG0Je
+      SS6TIleyL5sclFJDvDSQpac1QWt7x+UDwy+ZCHS0NuN7DmNj48Tqm4iGArM251wqg+9aFC1B
+      NGRSKeWZSs/Q2NxK0NRB+IyPjRKM1hNQBZ5iXj5jIPs6zBQ6WptvaX2/UW75MamlcoWfPfE8
+      hUIB4ft4nosQAiEEvu/juDamGULVdTzPR8YhMzlKNF6PockIfDxtHsH6+SQCEl0NKq6bIxoE
+      yXdQcDErSaaGR5ksuqy6+92cGpzi0KEzaN4Eve2NLFvagS/59PZ2E41FcZ0qvuMzOZFkZGyK
+      QNAkEgpjmAahsEEsXkfRC+H61zJV+/dLNTvJUBYWd19tOj1HjTflnODxyRRPPLm31uCdMkII
+      ZEWjUimjaQFUTSU5Nkx6aoSxsVEkSeHd7/0wnS1h+nramExbnBwLUh8PocgKEi4yFomgQyQE
+      qqbg+jKjkwWS6Sq5iiBhWpQyZ+me18zKJd20NNfxf/7Z/6Cjq5X3vf9d9HZ3UikU2H/wOI5t
+      097WiiwrhMMGdQ0tVOUGrm+gPMevKm+K34+2lkbWr13GgQOHcYVAQiBLEgoyrl2llMvhOiUa
+      m5oIBIJkpjNMjZ/lfQ/+Bq0tDSxDUHpqira4jyRcMiVBpqQylVfIFFwU1UNWZXKWSVWo6IZH
+      T5vNjN6AqsogywyPpkgXKhx+/DkefeIFwrEgmzasZtniJUwnU4TDYTzfB7kRk8R1PRfP8avN
+      m3pS/LFjp3jhxZeoeTDXsSsWeiCE7/vY5QKKCul0klw2RyQSplLKs3RhF3/4+x9kakZm4Gye
+      joSG7ThkSw4TOZe6hgYWLWqmtSXBT54+ycBQCic3zB1LAwQMk5dePsTR46fwfY/161ZRqVZZ
+      0N2BbTt0dbVw+swY0+lpFiych6IFWH77VgxzzuDt7cqb6vlp+fIlOK7NoUNHQMhIioqiKPi+
+      j6TpqIqEqmqYgQCBQBDh++x78Rjp6Rx/9qf/mUMnXKYKgqgpU3EE+C6pyQm6exNomkIylcMq
+      zeCVxshkGhg8f5b+MwMsv20Jq1cs4PaVi5mezpNoiJPPlXA8j+PeMK7rkmhooKN39Vzjf5vz
+      prs+u331SiLhMM+/eARf1Na8hRDIsoqsSKiqTjAo0A0DSZKIxhNMjKf5+j99l03bf42TZ7PY
+      ro+Pi+26WI7LvuePc3ogTXoiSX7qOEHTAlHive/aRi63llLJRpJrHuV8ScLxXAAMVSUcNHHq
+      Gll42yaEmDsb+O3OL8T3X1/ffKKxOHv3vUyxWEKSJGRZBllCVVUURUbTNBRZJhaLUyjkOXXm
+      Al3zThIK9pIplwkZEj4+kixTcWSOHzlDduosmuzglPNsumMHVrmC49dOJ1EVGd8DCRXH9pAk
+      CV3TWHvHZgKx1rnGPwfwJh2UfS2am+p51wPbWdjXUzOXkCSQQFU1FEVHkmphoUgYMxhE1QyO
+      HjnMituacX2fqu2gyAqaYVCuWJSLKSQtSm9njHfevwHdULBsB4SEkECSZRzXBTwcxyMQiiCF
+      u4jUd6Kqcz4/56jxC20Juq6xcf1Kers7ePHAUaanawdjeJ6PJCkIXGRFIRgM4rke+YJFMZ9C
+      kqFiy6DKyCjk8mU8OUZdwud/+sAGbKtCKV/C9WsLmaqioOk6tuOgqipGpAXfaABp7qs/x2ze
+      kk/hpd5gbDzJ4cNHGBudBECSNIRvo2kGnmdh+x6jo+NADM9z0XUJ23YRsoJQBMvmB6hWbSrl
+      ai3cl2qGP7JMMBRBD7cim/XIyus/V3eOtxdv2VhAkiQ62lvoaG8hk5nh3LlBBgYGmUpN4Ysq
+      himRma4yPTWNp4Xx0bAcH9+3UWUJzTBorpMoFUvMTGfRDQ0fiUhdMw3hBJF4c83txxxz3IA3
+      VQ/wRhFCkMnMMDExxsT4GMODw3R09eCq8+CimbPnVpnJF1Fkwe+/uwtZlnBcBZQAqEGk6zhd
+      mmOOa/FLJQBzzPGL5vIQKBy+9qFnc8zxq8zlHmCOOd6OzM0S53hbMycAc7ytmROAOd7WzAnA
+      HG9r5gRgjrc1r9IEV/jCQ5+nTO2MqO6+JTx43z2Y2hU5efT73+DE+ZrpQqKxlbvve4DO5tkH
+      SfhOlace/xnHTw8SitWz8977md85e/Pz4eef4ql9hy9fr9t6P1vXLbt8/a2vfYHR6Sue1FZt
+      3MnOTVdObcynx/nxTx5lIp2loaWNu3beU3MSdZFqcYaf/PgnDI8lidU3sXnbDhb3XPFDU5ke
+      4ZF9Z/jgO2d7gXCqRR7/2U85PThKrL6Je+9/x1Xv9/xTP+bQYJ4/+v0PX3RPUuHhbzzKh3/z
+      PVdV8LH9u3h87zE+8tGPEjVmf2+mR86w70yad+7cdNVzr+RrX/8av/s7v3v5evej36dj1U56
+      W674Ajp/4iVGy8FZdYjweeHZJ9h/+CRoJktXruXuO68cavfqOgbYev97WLfsiveJ/PQEP/np
+      o0ykZmjpnM87HryfWMiY9cz3v/Flzk/mAInG1g7ue+ABmuuunL10YPdj+HULWL+85mq+mL7A
+      j/f28x/efe8N3/sXgphFQfz5xz8thBDCdSzx9CPfFF//3uOzYnzts58Ug2lL+L4vRgdOiv/3
+      E58SzuxExLe/8rfiB48/J2zXE8nRAfGXn/iEGJsuzoqz65GHxa4D/eJ6fPrjfy4K173ri7/5
+      7/9NnBmeFL7vibGhc+Lk2aFZMb7+d58W+0+eF77vi6mJEXH4+Oy8CuP94tNfevhV6XriK3/7
+      38Xjz70sXM8TowOnxCc+8RdiumjPivXIw18Sn/vc58QzB05fSk38f5/87DVL+sXPfFr89Iff
+      ekXcK4z3HxBfeviR677lJT7+5x+fdf2dr31WHB1Mzwo7+vxj4juPPT8r7Pi+J8SX//URUbVd
+      USnmxN59+6+Z/rXSE0IIt5oTn/zEJ8SxM8PC81xxbP8u8Zef/oJw/dnxPvvJj4u0JYTve2Lg
+      5AHxiU/NrotKLin+4i8/JSoXH/zml/9WnBiees33/kVw3SGQoups2bKJCxdGrnlfkiTae5dQ
+      J5cpulfC3eIkJ5Pwa/dsQlNkmtp7edfOO9i97+CtFFuqlkM0EkKSZNrmzWfJgnmzYpQrFrFo
+      BEmSaGzpYOWyRa+ZanHyPEmauGfTahRZpr13MTvvWMK+g8evinvnPe/k4K6fYV91XtYVqtlR
+      nGA72zav58jBW/n+r49yuUwwHEFXFcxQlM0bbnyk6avpP7yfeau2cFtfF7KscNu6bXRHSvSP
+      XNsHkCTJ9C5ZjVzO8IomgRlt4q7be3js2QOkhk+QUdtY2nXzvldvBdc1hvNcm92799Ld3X3V
+      vQuDZ7FSCkNnjiC3LCb2ilRy6RSN7R2ztph3dnbw7NlTV6WTnBjl9Ona78aWdhKxV2qjS3z+
+      oYcu+42c3TXLfPAD7+Ern3uIUH0rGzbdybqVS2cdpPbeD36Qb3zjS/xQi7F+w0Y233E7qnzj
+      je/pVIr2js5ZYZ0dnZw9lboqrqyH2XZ7D0+/cIz7N1/bYdWxlw+yYs0agvXzUIvfIm/5Vw2D
+      XhelNA899NDly9TkGAu3vfZjt2/eyeC3HubPP7GX5avXsuOurdRFrvYndD3SUyk6O2cLTWdH
+      B+lUCroSrwgVDJ49TUrxOXNkPy2L117VsDbufJCHPv0ZLhwz+Y3f+aPXXYZrcfrgPhqWb6Re
+      h3379rFx48afMyXnagEopUd46KGHkBSVBYuX8xt333XVY8Pnz7Lv9EHal23hj3/vnlmNXdd1
+      yuXKrPjlchldu/oU9KnxEc6I2hhUDcZfJQAh/tPHPsb1DDS6F63kT//vFUyNXeCxnz7C6FSO
+      9957pSKaOubzX/6PP2MmNcHupx7lq0MTfORD77x+XVwqe2W21+JyuYymX/sE9zVb7uGv/+YL
+      bF3/B9e8f/DgYeLzJX402o/jOhw+OcDW1X3XjHtDQg187GMfu3z53a9/7nU9phghPvDbH8Gu
+      ljhycD+f+evP8F//9P8ipL0+DxiarlO46r+sELmqPnzOnz3z/7d3b7Ft3XUAx7/H1ziO4yTO
+      vU6ThiZp0gutunXsUhjrVmAjGxrTpAlpYkOaJl5WMV6Q9gxIsAomNnGphJB43J7KA+3DUMdA
+      QNaWtWu2pGuS5u7cbMfXc47POTy4beomoZelbdL/7/MW23GcON/j/7n9DwMnP2T7/md46Ynl
+      6zQubzmPP/JlTk1qNFat7XnYlpHhzLnzuDWH1q5uxi4Ms2NHN/39/dRXh5iOp3E0N9s2VXJq
+      YIp03uDA/geYi40u3woUrG3h9ddf50eHXuPpbz525WJiV9t/4EleO3SI2OBJPh+bKbkv1NiG
+      OX2eudTl+d8d+vr62Na9fMLZnXsfpLe3l97e3mUrydf5ldH1AqBRv6mV577zFEPDQyWP0PXi
+      z6+ua+Lp555lZmRohecp1djWwfT5M6T0Sx/gjkNf30d0b1t5+KR5Ahx8eAfHP+hbdl8+MU7a
+      18Se7V10dnbyxOOPcvoOD4Mu/w18ZUHuf/jrdNR7iCVvfF7+ru5uTvf1YV8a5dlmltP9I3S2
+      R695pJsDT/Zy6NBrDJ48wdhMfMXnKy8PUl5+459Aqyt+4gwMDJDKGlw4+wmt23exa1cPg/0D
+      pBfj5BenyVPO2XP9eN0uRgYH0c08sbTFgf0PAFDb0HDr5wOUhSK8+urL/OadI7hffIWO6KUx
+      ncvPC8/38ru3DtO9vYfE9ChGoJlv777ZJZ/OsaNHubysaevcyc6utktfGbz9izep3bKVqooy
+      zg98xoGnXyj57j///lcQaqauJszI5wM8dOD6lzty+St5vvdrvHX4MNt7tjE9+jmB5p3s7mha
+      9Xt2PPAo77/5c3LUlNx+9tRJdu17kK6uy/F0cPzYT0kZNiHf0nJncmSQo0ePAtCze99NLgj+
+      v9MfHuOf58Zpb42SScyS8EZpjdz47HeRzT3sa/+Yw79+m872KIP959h38FlqgyufYBSKNPPq
+      y9/jnSO/5cVXfki0Lrzi4744jS0dXUR8sLCwQKShhqnxGI4/S7CqjmgwyHvHTvLcd5/i09wM
+      zZu3EKmuxkOWTc2lM1JfczCcxcjIJG1tLaxmeuIiVfUtVzaNZpILzKUMWqOl0+8ZepbR0XGC
+      4QhN9ZFlz5OYi4E/RNUqY9KxkQtk9aVVqapIAw21S/MKO7bF5MQ4mbxJdHMr5f5r3hTHYWZ6
+      gkQqR+OmFiqDpW+8pWeZnE/R0rz8H07PphgdnyIcqac+snwu47nYJGXhOirKij8zPhcjninQ
+      3rr0x52ZGidY00jQ7ym9rbqB4KXv07MpRsYmr9y/fD2oaGRkpGRdbHZ6gkBV/ZWfD8VLpuYs
+      N3U1pf90mcU4k9OzBMM1NDesPO/pSs93tWR8jtjsAg3NLYQrlg9fJi6OUN/SxuWt5cmFWVIG
+      RK+5yEg2lSClU/I+3opsKok3GMbrgmQySTgcZmF2imzBQ7SpDnCIzczSUF8Pjs3F4SHKq+qI
+      hPxkTI1Q+eXNuJYcDSrUJnuChdIkAKE0CUAorWQrkOM4a3NxOHHbZPVCcW5VTcN2HDQ0NK14
+      LU3DtKgO3VvXOLjdSgKwbRu3W2ZVWK8Wswb9o/McPznC5Hya4dgiulGgKVJBW30lndFqHu7Z
+      hNvt4ktNt2sT5L1lTeYFOvKXUwxPrX7BZHHzfvDUHtqbS49CjcUz/PvTKb513xZcLo2j/7pA
+      daiMioCX7pYaFrMGizmT9obQKs8qrrUmAQxPJfhkeOb6DxQ3LJM3l93WVBPkrx8No5sF9mxt
+      YF9XI26XRnWoDLNg49I0khmdmsr6u/CKNyZZCd5ANMDndXPi7Di/fLePeDqPx+3CpWn85I9/
+      58d/OIHt2Nd9HrFEAthATNvBpYFuWmxrqWF0JsXejkbe+NM/SKSLx/gMTcpQ9GZIABvI1Hya
+      8bk0sXiGE2fGyeoFTpwd4/sHt/P4ns04jsN8Wkd27t84CWAD0TSNrc3F42hqwwHK/R7u72yk
+      uyXCIzuiOA44tvzz3wy5UsQGkMmb+D1ummqCzC/mcYAtjZVcnFnEKFjUhQNEayt4bPdmejbX
+      oGkaOb1AwC9v7/XIJ8AGkDctMkaBTN7k0LN78XvdVFeU0bM5wtnhOc4Mz/K3j8co93vY19nI
+      3GKeZNbAlqHQdUkA65zjOJgFiwuTCfKmRVe0hp+9/FWeeaiDZEbnPwNTZPQCoYCXlw7uxLZt
+      LsaSeD2uksPJxcpKDoe2LOuW9gQPTcZX3G4tbt2WpioqAkunHn50PkbetAj4PPi9Hpqqyxme
+      TjI4Eecbe9vI6gUmFjIYZoGKgI/2hhBVFXJYxPWsSQDi9kvnTMyChc/rvnJCDRQvBetxFz/I
+      80aBnF7A7XYRCnjluK4bIGtJ65RlO0wvpKkI+MjkTSKVASzbJpHOYzsOhmnhOGA5DrbtEPB5
+      KNg2hmnh97rJ6hrZvIlRsKkNB/B7ZcG2EglgnXK7NPKmRTKTZjqR4b6ORmYSWVI5g6mFDJHK
+      AItZA9t2cBwHn9dNJm9SX1VOKmuwtbmK8bkUsXiWunDpaYyxeIb3Tw3fpd9sfZEh0DplOw6x
+      eGbphuIRz6tb6f5Lt1VXlFHmW1rWnR2a4Y0j76/di93AZCvQOuXSNIamkliWQ04v8N/hWcZm
+      UjRUB/l4aJacbhFP6wyOxxmdSWE5DsPTSYamkjgOTC1kSGR0+kcXsGXn2KokgHVMNy0m5lPM
+      LebQAMMqjvEDfi/9o/NYVnHoYzsOZsHG7XJh2Q6ZvEnA5yGWyBY/FGRdeFWyDrBOOY7DV7qb
+      8HvcZI0C2bxJsMxH3rTY0VpLVYWPdM7E73XjcmnkjAKN1UE8bhepnEEo4GNrcxWLWQOPXC95
+      VRLAOqVp2pW5jkIBH6HA8ukZr56m3OdZWnerueq0yEjl2k5DeK+RRYNQmgQglCYBCKXJfgAF
+      yY6wJRKAUJoMgYTSZDOouGWF2VkyJz642y/jC5EAxC0rzM6SfPe9u/0yvhAZAgmlSQBCaRKA
+      UJoEIJQmAQilSQBCaRKAUJocCiFu2b2wI0wCEEqTIZBQmhwKIe6oycUkucL6mUZTAhB31NHP
+      zjG0MH+3X8YVMgQSSpMAhNIkAKE0CUAoTQIQSpMAhNIkAKE02Q8g7qimUOXdfgkl5FggoTQZ
+      AgmlSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKA
+      UJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQil
+      SQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoE
+      IJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBCaRKAUJoEIJQmAQilSQBC
+      aRKAUJoEIJQmAQilSQBCaf8DMOVvM6t97kQAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Soft Skills' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACcklEQVR4nO3cMYoQURBF0Wrp/W9PFBEHFdzAMGNUBoNb6B/cc6IOX3KhK/nX7u5A1KfT
+      A+AkAZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoA
+      SBMAaQIgTQCkCYC0e2Zmd8cDcRTd/z9evn09uQOOuLwNSpkbgDQBkCYA0gRAmgBIEwBpAiBN
+      AKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA
+      mgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKTd
+      MzO7O9+/fD69BR537e6eHgGn+AUiTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIE
+      QJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCk
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaffMzO7On18/T2+Bx137Yd5e
+      X09vgcddu7unR8ApbgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQ
+      JgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmANAGQJgDSBECaAEgTAGkC
+      IE0ApAmANAGQJgDSBECaAEgTAGkCIE0ApAmAtHtmZnfn98uPw1Pgedd+mL/v76e3wOOu3d3T
+      I+AUNwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgLR/FO9Cl8hOtKcAAAAASUVORK5C
+      YII=
+    </thumbnail>
+    <thumbnail height='192' name='Technical Skills' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACZ0lEQVR4nO3cMUpFMRRF0fvkzX96oohgp+AAtLpWTuGn2GtVKU+zIWly7e4ORD2dHgAn
+      CYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoA
+      SBMAaQIgTQCkCYC0e2Zmd8cPiRTd/4ePt9eTO+CIy+e4lHkDkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQB
+      kCYA0u6Zmd2d95fn01vg4a7d3dMj4BRXINIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMA
+      aQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAm
+      ANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQNo9M7O78/vz
+      c3oLPNz9f/j++jy5A464dndPj4BTvAFIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJ
+      gDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBI
+      EwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBp98zM7s77y/Pp
+      LfBw1+7u6RFwiisQaQIgTQCkCYA0AZD2B7exMb7ISiyyAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='bg' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
