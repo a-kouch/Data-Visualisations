@@ -11,7 +11,7 @@ This repository contains a collection of dashboards and data visualisations crea
 
 ## 📁 Projects Included
 
-- **[Tableau Resume]([https://public.tableau.com/app/profile/anthony.kouch](https://public.tableau.com/app/profile/anthony.kouch/viz/TableauResumev2_17410015248620/ResumeDashboard))**  
+- **[Tableau Resume](https://public.tableau.com/app/profile/anthony.kouch/viz/TableauResumev2_17410015248620/ResumeDashboard)**  
   An interactive personal resume built in Tableau to showcase professional experience, education, and technical skills in a visually engaging format.
 
 - **Customer Churn Analysis**  
