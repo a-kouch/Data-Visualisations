@@ -15,7 +15,7 @@ This repository contains a collection of dashboards and data visualisations crea
   An interactive personal resume built in Tableau to showcase professional experience, education, and technical skills in a visually engaging format.
 
 - **Customer Churn Analysis**  
-  A DataCamp project exploring customer churn for a telecommunications company. Includes visual breakdowns of customer behavior, tenure, and service usage to highlight churn risk factors.
+  A DataCamp Power BI project exploring customer churn for a telecommunications company. Includes visual breakdowns of customer behavior, tenure, and service usage to highlight churn risk factors.
 
 *More dashboards will be added as projects are completed.*
 
